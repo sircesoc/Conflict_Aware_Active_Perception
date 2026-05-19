@@ -6,8 +6,8 @@ Safe navigation with active perception in 3D Gaussian Splatting fields using Con
 
 ```bash
 # create and activate a conda environment (Python 3.9–3.12)
-conda create -n cap_cbf python=3.11 -y
-conda activate cap_cbf
+conda create -n CAAP_cbf python=3.11 -y
+conda activate CAAP_cbf
 
 # install dependencies
 pip install -r requirements.txt
