@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions.">
+  <meta name="keywords" content="3D Gaussian Splatting, Control Barrier Functions, Active Perception, Safe Robotics, AVaR, CDC 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conflict-Aware Active Perception in 3D Gaussian Splatting Fields</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Amirhossein Mollaei Khass</a>,</span>
+            <span class="author-block">
+              <a href="#">Athanasios Cosse</a>,</span>
+            <span class="author-block">
+              <a href="#">Vivek Pandey</a>,</span>
+            <span class="author-block">
+              <a href="#">Nader Motee</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Department of Mechanical Engineering and Mechanics, Lehigh University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="venue-block"><b>Submitted to CDC 2026</b></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdf/paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (coming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sircesoc/Conflict_Aware_Active_Perception"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- BibTeX Link. -->
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-quote-left"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TEASER: animated comparison of CBF formulations. -->
+      <video id="teaser" autoplay muted loop playsinline
+             style="width:100%; border-radius:8px;">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h2 class="subtitle has-text-centered">
+        A <span class="dnerf">conflict-aware</span> framework that jointly enforces safety as a hard constraint
+        and relaxes perception via slack variables in a unified primal–dual CBF-QP.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Active perception in uncertain environments requires robots to navigate safely while
+            acquiring informative observations to reduce map uncertainty. These objectives inherently
+            conflict, as informative viewpoints often lie near uncertain regions with higher collision risk.
+            To address this challenge, we develop a <b>conflict-aware active perception and control framework</b>
+            for robots operating in environments represented by <b>3D Gaussian Splatting (3DGS)</b>.
+          </p>
+          <p>
+            Safety is enforced using a Control Barrier Function (CBF) derived from an
+            <b>Average Value-at-Risk (AVaR)</b> collision-risk metric that accounts for geometric
+            uncertainty and guarantees forward invariance of a safe set. To improve perception, we
+            propose a risk-aware <b>Expected Information Gain (EIG)</b> formulation for selecting the
+            next-best-view and introduce a perception barrier that aligns the camera orientation
+            with the local information-ascent direction.
+          </p>
+          <p>
+            To obtain a tractable formulation of conflicting safety and perception objectives, we
+            propose a unified safety-critical quadratic program, where safety is enforced as a hard
+            constraint and perception is incorporated via a slack relaxation. Simulation results
+            demonstrate that the proposed method improves both safety and information acquisition
+            compared to existing 3DGS-based approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{khass2026conflict,
+  title     = {Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions},
+  author    = {Khass, Amirhossein Mollaei and Cosse, Athanasios and Pandey, Vivek and Motee, Nader},
+  booktitle = {Proceedings of the IEEE Conference on Decision and Control (CDC)},
+  year      = {2026},
+  note      = {Submitted}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built with the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+            project page template. Source code is available under the
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

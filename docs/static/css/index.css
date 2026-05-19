@@ -1,0 +1,84 @@
+/* Nerfies-style project page CSS */
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+  padding-top: 0.6rem;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.venue-block {
+  display: inline-block;
+  padding-top: 0.6rem;
+  color: #555;
+}
+
+.publication-links {
+  padding-top: 1.5rem;
+}
+
+.link-block a {
+  margin: 0.25rem;
+}
+
+.hero.teaser {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.hero.teaser img,
+.hero.teaser video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.subtitle.has-text-centered {
+  padding-top: 1.5rem;
+  color: #555;
+  font-size: 1.15rem;
+}
+
+.content pre {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: hsl(204, 86%, 53%);
+}
+
+/* Make math-ish blocks look a bit nicer */
+.dnerf {
+  font-variant: small-caps;
+  font-weight: 600;
+}
